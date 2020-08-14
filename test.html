@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!--文字コード!-->
+  <meta charset="utf-8">
+
+
+  <!--スタイルシート-->
+  <!-- <link rel="stylesheet" href="reset.min.css" media="all"> -->
+  <link rel="stylesheet" href="style.css" media="all">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+  <!--jQuaryー-->
+  <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+
+  <script>
+
+
+
+    /*Tablet, Mobile用のハンバーガーメニューjQuery*/
+    // 参考：https://125naroom.com/web/2958
+    $(function(){
+      var $nav   = $('#navArea');
+      var $btn   = $('.toggle_btn');
+      var $mask  = $('#mask');
+      var open   = 'open'; // class
+      // menu open close
+      $btn.on( 'click', function() {
+        if ( ! $nav.hasClass( open ) ) {
+          $nav.addClass( open );
+        } else {
+          $nav.removeClass( open );
+        }
+      });
+      // mask close
+      $mask.on('click', function() {
+        $nav.removeClass( open );
+      });
+    })
+    // (function($) {
+    //   var $nav   = $('#navArea');
+    //   var $btn   = $('.toggle_btn');
+    //   var $mask  = $('#mask');
+    //   var open   = 'open'; // class
+    //   // menu open close
+    //   $btn.on( 'click', function() {
+    //     if ( ! $nav.hasClass( open ) ) {
+    //       $nav.addClass( open );
+    //     } else {
+    //       $nav.removeClass( open );
+    //     }
+    //   });
+    //   // mask close
+    //   $mask.on('click', function() {
+    //     $nav.removeClass( open );
+    //   });
+    // } )(jQuery);
+
+  </script>
+</head>
+<body>
+  <div id="navArea">
+
+    <nav>
+      <div class="inner">
+        <ul>
+          <li><a href="#">Text</a></li>
+          <li><a href="#">Text</a></li>
+          <li><a href="#">Text</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="toggle_btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="mask"></div>
+
+  </div>
+
+  <main>
+    <h1>Hamburger Menu Sample02</h1>
+  </main>
+</body>
+</html>
