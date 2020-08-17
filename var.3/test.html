@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex,nofollow">
+	<title>レスポンシブヘッダー</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+
+	<script
+	src="https://code.jquery.com/jquery-2.2.4.js"
+	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+	crossorigin="anonymous"></script>
+	  <script>
+		$(function() {
+			const hum = $('#hamburger, .close')
+			const nav = $('.sp-nav')
+			hum.on('click', function(){
+				nav.toggleClass('toggle');
+			});
+      $('.sp-nav a').on('click', function () {
+        nav.toggleClass('toggle');
+      })
+		});
+	  </script>
+</head>
+<body>
+	<header>
+		<h1>
+			<a href="/">RICO NOTES</a>
+		</h1>
+		<nav class="pc-nav">
+			<ul>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">SERVICE</a></li>
+				<li><a href="#">COMPANY</a></li>
+				<li><a href="#">CONTACT</a></li>
+			</ul>
+		</nav>
+		<nav class="sp-nav">
+			<!-- <ul>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">SERVICE</a></li>
+				<li><a href="#">COMPANY</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li class="close"><span>閉じる</span></li>
+      </ul> -->
+      <ul>
+				<li><a href="#menu01">ABOUT</a></li>
+				<li><a href="#menu02">SERVICE</a></li>
+				<li><a href="#menu03">COMPANY</a></li>
+				<li><a href="#menu04">CONTACT</a></li>
+				<li class="close"><span>閉じる</span></li>
+			</ul>
+		</nav>
+		<div id="hamburger">
+			<span></span>
+		</div>
+	</header>
+	<!-- <div class="main-visual">
+		<h2>WEB DESIGN <span>IS</span> YOUR FUTURE</h2>
+  </div> -->
+  <div class="contents">
+    <div id="menu01">
+      <img src="https://cocotsubu.com/demo/demo01/images/01.jpg" alt="" >
+    </div>
+    <div id="menu02">
+      <img src="https://cocotsubu.com/demo/demo01/images/02.jpg" alt="">
+    </div>
+    <div id="menu03">
+      <img src="https://cocotsubu.com/demo/demo01/images/03.jpg" alt="">
+    </div>
+    <div id="menu04">
+      <ul><input id="modal-trigger-small" class="checkbox" type="checkbox">
+        <li><label for="modal-trigger01"><img src="https://cocotsubu.com/demo/demo01/images/04.jpg" alt=""></label></li>
+        <li><label for="modal-trigger02"><img src="https://cocotsubu.com/demo/demo01/images/04.jpg" alt=""></label></li>
+      </ul>
+    <!--  modal -->
+    <div class="modal">
+      <input id="modal-trigger01" class="checkbox" type="checkbox">
+      <div class="modal-overlay">
+        <label for="modal-trigger01" class="o-close"></label>
+        <div class="modal-wrap">
+          <label for="modal-trigger01" class="close">&#10006;</label>
+          <h2>タイトル</h2>
+          <p>テキストが入ります。</p>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <input id="modal-trigger02" class="checkbox" type="checkbox">
+      <div class="modal-overlay">
+        <label for="modal-trigger02" class="o-close"></label>
+        <div class="modal-wrap">
+          <label for="modal-trigger02" class="close">&#10006;</label>
+          <h2>タイトル</h2>
+          <p>テキストが入ります。</p>
+        </div>
+      </div>
+    </div>
+    <!--  modal end -->
+    </div>
+  </div>
+</body>
+</html>
