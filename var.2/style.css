@@ -160,6 +160,22 @@ header h1 {
     font-size: 1.4rem;
     text-align: center;
 }
+
+.bbb::before {
+  font-family:'Font Awesome 5 Free';
+  content: "\f058";
+  padding-right : 5px;
+  color: #DB7093;
+}
+
+.aaa a {
+  line-height: 65px;
+  padding: 0 25px;
+  /* display: block; */
+}
+.bbb {
+  /* padding: 100px; */
+}
 @media screen and (max-width:768px) {
     header h1,
     #nav ul li a {
